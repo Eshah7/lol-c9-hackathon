@@ -7,10 +7,14 @@ Tools and documentation for interacting with Grid.gg APIs for the Cloud9 x JetBr
 ```
 .
 ├── README.md                 # This file
+├── dashboard.py              # Interactive Streamlit dashboard
 ├── requirements.txt         # Python dependencies
 ├── env.example              # Environment variable template
 ├── docs/                    # All documentation
 │   ├── HACKATHON_API_GUIDE.md          # ⭐ Start here - Complete API guide
+│   ├── SIMPLE_GUIDE.md                 # Easy guide for non-coders
+│   ├── QUICKSTART_MCP_DASHBOARD.md     # Quick start for dashboard & MCP
+│   ├── SCOUTING_AND_DASHBOARD_SUMMARY.md # Summary of implementation
 │   ├── HACKATHON_CATEGORY_ANALYSIS.md   # Data analysis for each category
 │   ├── CATEGORY_DATA_MAPPING.md        # Detailed examples with code
 │   ├── DATA_AVAILABILITY_SUMMARY.md    # Quick reference
@@ -21,12 +25,16 @@ Tools and documentation for interacting with Grid.gg APIs for the Cloud9 x JetBr
 │   ├── QUICKSTART.md                   # Quick start guide
 │   └── API_DISCOVERY.md                # Initial API exploration results
 ├── scripts/                 # Python scripts
+│   ├── mcp_server.py                # MCP server for AI assistants
+│   ├── scouting_report.py           # Team scouting reports
+│   ├── scouting_from_series.py      # Scouting from specific series
 │   ├── api_explorer.py              # Explore Central Data API
 │   ├── series_state_api.py          # Query Series State API
 │   ├── file_download_api.py         # Download event files
 │   ├── data_explorer.py             # Comprehensive data exploration
 │   ├── query_available_data.py      # Test available data
-│   └── get_valorant_series.py      # Get Valorant series IDs
+│   ├── get_valorant_series.py      # Get Valorant series IDs
+│   └── utils.py                    # Shared utilities
 ├── data/                     # Downloaded data files
 │   └── (event files, end states, etc.)
 └── notes/                    # Notes and references
@@ -53,6 +61,13 @@ See `docs/QUICKSTART.md` for detailed instructions.
 ### Getting Started
 - **`docs/HACKATHON_API_GUIDE.md`** ⭐ **Start here!** Complete guide to all three APIs
 - **`docs/QUICKSTART.md`** - Step-by-step quick start guide
+- **`docs/SIMPLE_GUIDE.md`** - Easy guide for non-coders
+- **`docs/QUICKSTART_MCP_DASHBOARD.md`** - Quick start for dashboard & MCP
+
+### Scouting & Analysis
+- **`docs/SCOUTING_AND_DASHBOARD_SUMMARY.md`** - Summary of implementation
+- **`docs/DASHBOARD_GUIDE.md`** - Guide to using the interactive dashboard
+- **`docs/MCP_TOOL_GUIDE.md`** - Guide to using the MCP tools
 
 ### Hackathon Categories
 - **`docs/HACKATHON_CATEGORY_ANALYSIS.md`** - Data analysis for each category

@@ -1,2 +1,13 @@
-# No external dependencies required - uses Python standard library (urllib)
+# Core dependencies (standard library - no install needed)
+# urllib, json, ssl, etc. are built-in
+
+# Optional dependencies for advanced features:
+
+# MCP Server (for AI assistant integration)
+mcp>=0.1.0
+
+# Interactive Dashboard
+streamlit>=1.28.0
+pandas>=2.0.0
+plotly>=5.17.0
 

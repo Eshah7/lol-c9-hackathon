@@ -1,0 +1,489 @@
+============================================================
+Grid.gg Central Data API Explorer
+============================================================
+📋 Step 1: Fetching available titles...
+{
+  "data": {
+    "titles": [
+      {
+        "id": "1",
+        "name": "Counter Strike: Global Offensive"
+      },
+      {
+        "id": "2",
+        "name": "Defense of the Ancients 2"
+      },
+      {
+        "id": "3",
+        "name": "League of Legends"
+      },
+      {
+        "id": "4",
+        "name": "PlayerUnknowns Battlegrounds"
+      },
+      {
+        "id": "5",
+        "name": "Kings of Glory"
+      },
+      {
+        "id": "6",
+        "name": "Valorant"
+      },
+      {
+        "id": "7",
+        "name": "PlayerUnknowns Battlegrounds Mobile"
+      },
+      {
+        "id": "8",
+        "name": "Drone Champions League"
+      },
+      {
+        "id": "9",
+        "name": "FIFA20"
+      },
+      {
+        "id": "10",
+        "name": "FallGuys"
+      },
+      {
+        "id": "11",
+        "name": "Mobile Legends"
+      },
+      {
+        "id": "12",
+        "name": "F1 2020"
+      },
+      {
+        "id": "13",
+        "name": "League of Legends Wild Rift"
+      },
+      {
+        "id": "14",
+        "name": "Skullgirls 2nd Encore"
+      },
+      {
+        "id": "15",
+        "name": "Crossfire"
+      },
+      {
+        "id": "16",
+        "name": "Counter Strike: Global Offensive - 2v2"
+      },
+      {
+        "id": "17",
+        "name": "FIFA22"
+      },
+      {
+        "id": "18",
+        "name": "F1\u00ae 22"
+      },
+      {
+        "id": "19",
+        "name": "Tekken 7"
+      },
+      {
+        "id": "20",
+        "name": "eFootball 23"
+      },
+      {
+        "id": "21",
+        "name": "Street Fighter V"
+      },
+      {
+        "id": "22",
+        "name": "GRID-TEST"
+      },
+      {
+        "id": "23",
+        "name": "Naraka: Bladepoint"
+      },
+      {
+        "id": "24",
+        "name": "EA SPORTS\u2122 FIFA 23"
+      },
+      {
+        "id": "25",
+        "name": "Tom Clancy's Rainbow Six Siege"
+      },
+      {
+        "id": "26",
+        "name": "Taunt Battleworld"
+      },
+      {
+        "id": "27",
+        "name": "Tom Clancy's Rainbow Six Siege (Test)"
+      },
+      {
+        "id": "28",
+        "name": "Counter Strike 2"
+      },
+      {
+        "id": "29",
+        "name": "Crossfire (Test)"
+      },
+      {
+        "id": "30",
+        "name": "Wizards of the Coast"
+      },
+      {
+        "id": "31",
+        "name": "Standoff 2 (Test)"
+      },
+      {
+        "id": "32",
+        "name": "Standoff 2"
+      },
+      {
+        "id": "33",
+        "name": "Deadlock"
+      },
+      {
+        "id": "34",
+        "name": "Legion TD 2"
+      },
+      {
+        "id": "35",
+        "name": "Legion TD 2 (Test)"
+      },
+      {
+        "id": "36",
+        "name": "Rocket Science (Test)"
+      },
+      {
+        "id": "37",
+        "name": "NBA 2K"
+      },
+      {
+        "id": "38",
+        "name": "EA Sports FC"
+      }
+    ]
+  }
+}
+✅ Found 38 titles
+📊 Using title ID: 3
+🏆 Step 2: Fetching tournaments for title...
+{
+  "data": {
+    "tournaments": {
+      "totalCount": 173,
+      "edges": [
+        {
+          "node": {
+            "id": "756907",
+            "name": "LCK - Spring 2024 (Regular Season: Regular Season)"
+          }
+        },
+        {
+          "node": {
+            "id": "756908",
+            "name": "LCK - Spring 2024 (Playoffs: Playoffs)"
+          }
+        },
+        {
+          "node": {
+            "id": "756928",
+            "name": "LEC - Winter 2024 (Regular Season: Regular Season)"
+          }
+        },
+        {
+          "node": {
+            "id": "756935",
+            "name": "LCS - Spring 2024 (Regular Season: Regular Season)"
+          }
+        },
+        {
+          "node": {
+            "id": "756960",
+            "name": "LPL - Spring 2024 (Regular Season: Regular Season)"
+          }
+        },
+        {
+          "node": {
+            "id": "756962",
+            "name": "LPL - Spring 2024 (Playoffs: Playoffs)"
+          }
+        },
+        {
+          "node": {
+            "id": "757068",
+            "name": "LEC - Winter 2024 (Playoffs: Playoffs)"
+          }
+        },
+        {
+          "node": {
+            "id": "757087",
+            "name": "LCS - Spring 2024 (Playoffs: Playoffs)"
+          }
+        },
+        {
+          "node": {
+            "id": "757210",
+            "name": "LEC - Spring 2024 (Regular Season: Regular Season)"
+          }
+        },
+        {
+          "node": {
+            "id": "758024",
+            "name": "LCK - Spring 2024"
+          }
+        }
+      ]
+    }
+  }
+}
+✅ Found 173 tournaments
+🎮 Using tournament ID: 756907
+🎯 Step 3: Fetching series for tournament...
+{
+  "data": {
+    "allSeries": {
+      "totalCount": 90,
+      "edges": [
+        {
+          "node": {
+            "id": "2616371",
+            "startTimeScheduled": "2024-01-17T08:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "52747",
+                  "name": "NONGSHIM RED FORCE"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "47961",
+                  "name": "DRX"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616372",
+            "startTimeScheduled": "2024-01-17T11:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "47494",
+                  "name": "T1"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "47558",
+                  "name": "Gen.G Esports"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616373",
+            "startTimeScheduled": "2024-01-18T08:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "52817",
+                  "name": "OKSavingsBank BRION"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "48179",
+                  "name": "Dplus KIA"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616374",
+            "startTimeScheduled": "2024-01-18T10:50:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "4035",
+                  "name": "BNK FearX"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "407",
+                  "name": "KT Rolster"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616375",
+            "startTimeScheduled": "2024-01-19T08:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "406",
+                  "name": "Hanwha Life Esports"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "47961",
+                  "name": "DRX"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616376",
+            "startTimeScheduled": "2024-01-19T10:50:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "47494",
+                  "name": "T1"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "3483",
+                  "name": "DN FREECS"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616377",
+            "startTimeScheduled": "2024-01-20T06:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "4035",
+                  "name": "BNK FearX"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "52817",
+                  "name": "OKSavingsBank BRION"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616378",
+            "startTimeScheduled": "2024-01-20T08:30:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "52747",
+                  "name": "NONGSHIM RED FORCE"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "47558",
+                  "name": "Gen.G Esports"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616379",
+            "startTimeScheduled": "2024-01-21T06:00:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "3483",
+                  "name": "DN FREECS"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "406",
+                  "name": "Hanwha Life Esports"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "id": "2616380",
+            "startTimeScheduled": "2024-01-21T08:40:00Z",
+            "teams": [
+              {
+                "baseInfo": {
+                  "id": "407",
+                  "name": "KT Rolster"
+                }
+              },
+              {
+                "baseInfo": {
+                  "id": "48179",
+                  "name": "Dplus KIA"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pageInfo": {
+        "endCursor": "JAMWBQMjHhoSJBQfEhMCGxITCwtaCwtFQUZBRE9HCwtaCwtFR0VDWkdGWkVGI0dPTUNHTUdHLQ==",
+        "hasNextPage": true
+      }
+    }
+  }
+}
+✅ Found 90 series
+📝 Sample Series IDs:
+  - Series ID: 2616371
+    Teams: NONGSHIM RED FORCE vs DRX
+  - Series ID: 2616372
+    Teams: T1 vs Gen.G Esports
+  - Series ID: 2616373
+    Teams: OKSavingsBank BRION vs Dplus KIA
+  - Series ID: 2616374
+    Teams: BNK FearX vs KT Rolster
+  - Series ID: 2616375
+    Teams: Hanwha Life Esports vs DRX
+============================================================
+🔍 Step 4: Exploring API Schema...
+============================================================
+📚 Available Query Fields:
+  - title: Title
+  - titles: Unknown
+  - tournament: Tournament
+  - tournaments: Unknown
+  - tournamentIdByExternalId: ID
+  - team: Team
+  - teams: Unknown
+  - teamIdByExternalId: ID
+  - series: Series
+  - seriesFormats: Unknown
+  - seriesIdByExternalId: ID
+  - allSeries: Unknown
+  - player: Player
+  - players: Unknown
+  - playerIdByExternalId: ID
+  - organization: Organization
+  - organizations: Unknown
+  - gameIdByExternalId: ID
+  - dataProviders: Unknown
+  - playerRole: PlayerRole
+  - playerRoles: Unknown
+  - _service: Unknown
+  - _entities: Unknown
