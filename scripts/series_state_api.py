@@ -62,7 +62,12 @@ def query_graphql(query: str, variables: Optional[Dict] = None, api_key: Optiona
         raise
 
 def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str, Any]:
-    """Get complete series state for a Series ID."""
+    """Get complete series state for a Series ID.
+    
+    Uses a basic query compatible with current API schema.
+    LoL-specific fragments and version-specific fields are excluded
+    to ensure compatibility across different API versions.
+    """
     query = """
     query SeriesState($seriesId: ID!) {
         seriesState(id: $seriesId) {
@@ -74,10 +79,8 @@ def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str,
             format
             started
             finished
-            forfeited
             valid
             startedAt
-            duration
             teams {
                 id
                 name
@@ -85,31 +88,12 @@ def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str,
                 won
                 kills
                 deaths
-                ... on SeriesTeamStateLol {
-                    damageDealt
-                    damageTaken
-                    visionScore
-                    kdaRatio
-                    totalMoneyEarned
-                }
                 players {
                     id
                     name
                     kills
                     deaths
                     killAssistsGiven
-                    ... on SeriesPlayerStateLol {
-                        damageDealt
-                        damageTaken
-                        damagePercentage
-                        visionScore
-                        kdaRatio
-                        totalMoneyEarned
-                        character {
-                            id
-                            name
-                        }
-                    }
                 }
             }
             games {
@@ -117,8 +101,6 @@ def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str,
                 sequenceNumber
                 started
                 finished
-                startedAt
-                duration
                 map {
                     name
                 }
@@ -130,15 +112,6 @@ def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str,
                     score
                     kills
                     deaths
-                    ... on GameTeamStateLol {
-                        damageDealt
-                        damageTaken
-                        visionScore
-                        baronPowerPlays {
-                            id
-                            value
-                        }
-                    }
                     players {
                         id
                         name
@@ -148,20 +121,6 @@ def get_series_state(series_id: str, api_key: Optional[str] = None) -> Dict[str,
                         character {
                             id
                             name
-                        }
-                        ... on GamePlayerStateLol {
-                            damageDealt
-                            damageTaken
-                            damagePercentage
-                            visionScore
-                            kdaRatio
-                            totalMoneyEarned
-                            moneyPerMinute
-                            damagePerMinute
-                            respawnClock {
-                                ticking
-                                currentSeconds
-                            }
                         }
                     }
                 }
@@ -223,8 +182,6 @@ def print_series_summary(series_state: Dict[str, Any]):
     print(f"Status: {'✅ Finished' if data.get('finished') else '⏳ In Progress' if data.get('started') else '⏸️  Not Started'}")
     if data.get('startedAt'):
         print(f"Started: {data.get('startedAt')}")
-    if data.get('duration'):
-        print(f"Duration: {data.get('duration')}")
     print()
     
     # Teams summary
@@ -258,7 +215,7 @@ def print_series_summary(series_state: Dict[str, Any]):
                 print(f"     {won_emoji} {team.get('name', 'Unknown')} ({team.get('side', 'Unknown')}): Score {team.get('score', 0)}")
             print()
     
-    # Top players
+    # Top players (from series-level stats, character info comes from games)
     if teams:
         print("⭐ Top Players (by KDA):")
         all_players = []
@@ -275,12 +232,26 @@ def print_series_summary(series_state: Dict[str, Any]):
                     "deaths": deaths,
                     "assists": assists,
                     "kda": kda,
-                    "character": player.get("character", {}).get("name", "Unknown")
+                    "player_id": player.get("id")
                 })
         
         all_players.sort(key=lambda x: x["kda"], reverse=True)
         for i, player in enumerate(all_players[:5], 1):
-            print(f"  {i}. {player['name']} ({player['character']}) - {player['team']}")
+            # Try to find character from games (use most played character)
+            character = "Unknown"
+            if games:
+                char_counts = {}
+                for game in games:
+                    for game_team in game.get("teams", []):
+                        for game_player in game_team.get("players", []):
+                            if game_player.get("id") == player["player_id"]:
+                                char_name = game_player.get("character", {}).get("name")
+                                if char_name:
+                                    char_counts[char_name] = char_counts.get(char_name, 0) + 1
+                if char_counts:
+                    character = max(char_counts.items(), key=lambda x: x[1])[0]
+            
+            print(f"  {i}. {player['name']} ({character}) - {player['team']}")
             print(f"     K/D/A: {player['kills']}/{player['deaths']}/{player['assists']} (KDA: {player['kda']:.2f})")
 
 def main():

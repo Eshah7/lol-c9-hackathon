@@ -1,0 +1,43 @@
+{
+  "series_id": "2616372",
+  "central_data": {},
+  "series_state": {},
+  "file_download": {
+    "files": [
+      {
+        "id": "events-grid",
+        "description": "Grid Series Events (.jsonl)",
+        "status": "ready",
+        "fileName": "events_2616372_grid.jsonl.zip",
+        "fullURL": "https://api.grid.gg/file-download/events/grid/series/2616372"
+      },
+      {
+        "id": "state-grid",
+        "description": "Grid Post Series State (.json)",
+        "status": "ready",
+        "fileName": "end_state_2616372_grid.json",
+        "fullURL": "https://api.grid.gg/file-download/end-state/grid/series/2616372"
+      }
+    ],
+    "events_available": true,
+    "end_state_available": true
+  },
+  "category_analysis": {
+    "category1": {
+      "available": [
+        "\u2705 Event-by-event historical data (every kill, death, objective)"
+      ],
+      "missing": []
+    },
+    "category2": {
+      "available": [
+        "\u2705 Detailed event data for strategy analysis"
+      ],
+      "missing": []
+    },
+    "category3": {
+      "available": [],
+      "missing": []
+    }
+  }
+}

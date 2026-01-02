@@ -1,0 +1,539 @@
+{
+  "data": {
+    "seriesState": {
+      "id": "2616372",
+      "version": "3.1",
+      "title": {
+        "nameShortened": "lol"
+      },
+      "format": "best-of-3",
+      "started": true,
+      "finished": true,
+      "valid": true,
+      "startedAt": "2024-01-17T10:59:00Z",
+      "teams": [
+        {
+          "id": "47494",
+          "name": "T1",
+          "score": 1,
+          "won": false,
+          "kills": 26,
+          "deaths": 47,
+          "players": [
+            {
+              "id": "23596",
+              "name": "Zeus",
+              "kills": 6,
+              "deaths": 9,
+              "killAssistsGiven": 16
+            },
+            {
+              "id": "21690",
+              "name": "Oner",
+              "kills": 5,
+              "deaths": 11,
+              "killAssistsGiven": 12
+            },
+            {
+              "id": "20763",
+              "name": "Faker",
+              "kills": 4,
+              "deaths": 11,
+              "killAssistsGiven": 15
+            },
+            {
+              "id": "24427",
+              "name": "Gumayusi",
+              "kills": 9,
+              "deaths": 7,
+              "killAssistsGiven": 9
+            },
+            {
+              "id": "26121",
+              "name": "Keria",
+              "kills": 2,
+              "deaths": 9,
+              "killAssistsGiven": 20
+            }
+          ]
+        },
+        {
+          "id": "47558",
+          "name": "Gen.G",
+          "score": 2,
+          "won": true,
+          "kills": 47,
+          "deaths": 26,
+          "players": [
+            {
+              "id": "21335",
+              "name": "Kiin",
+              "kills": 5,
+              "deaths": 9,
+              "killAssistsGiven": 13
+            },
+            {
+              "id": "21233",
+              "name": "Canyon",
+              "kills": 4,
+              "deaths": 2,
+              "killAssistsGiven": 25
+            },
+            {
+              "id": "22958",
+              "name": "Chovy",
+              "kills": 17,
+              "deaths": 5,
+              "killAssistsGiven": 18
+            },
+            {
+              "id": "24653",
+              "name": "Peyz",
+              "kills": 18,
+              "deaths": 5,
+              "killAssistsGiven": 14
+            },
+            {
+              "id": "20972",
+              "name": "Lehends",
+              "kills": 2,
+              "deaths": 5,
+              "killAssistsGiven": 26
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "c7d7f036-c797-46d9-be13-a21799969641",
+          "sequenceNumber": 1,
+          "started": true,
+          "finished": true,
+          "map": {
+            "name": "Summoner's Rift"
+          },
+          "teams": [
+            {
+              "id": "47494",
+              "name": "T1",
+              "side": "red",
+              "won": true,
+              "score": 6,
+              "kills": 6,
+              "deaths": 5,
+              "players": [
+                {
+                  "id": "23596",
+                  "name": "Zeus",
+                  "kills": 3,
+                  "deaths": 2,
+                  "killAssistsGiven": 3,
+                  "character": {
+                    "id": "3d6dd0f6-f96f-3375-84f6-86ac9ff68538",
+                    "name": "Gwen"
+                  }
+                },
+                {
+                  "id": "21690",
+                  "name": "Oner",
+                  "kills": 2,
+                  "deaths": 0,
+                  "killAssistsGiven": 3,
+                  "character": {
+                    "id": "bbd16ab8-92ed-3f82-8748-b23c20eca335",
+                    "name": "Jarvan IV"
+                  }
+                },
+                {
+                  "id": "20763",
+                  "name": "Faker",
+                  "kills": 1,
+                  "deaths": 3,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "64a87acc-1566-3df6-ba47-c9847adb808d",
+                    "name": "Neeko"
+                  }
+                },
+                {
+                  "id": "24427",
+                  "name": "Gumayusi",
+                  "kills": 0,
+                  "deaths": 0,
+                  "killAssistsGiven": 4,
+                  "character": {
+                    "id": "2318754b-1f27-3758-a5d7-d221fce0f02e",
+                    "name": "Lucian"
+                  }
+                },
+                {
+                  "id": "26121",
+                  "name": "Keria",
+                  "kills": 0,
+                  "deaths": 0,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "e680cccf-8234-39c7-979f-4b749909b65a",
+                    "name": "Milio"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "47558",
+              "name": "Gen.G",
+              "side": "blue",
+              "won": false,
+              "score": 5,
+              "kills": 5,
+              "deaths": 6,
+              "players": [
+                {
+                  "id": "21335",
+                  "name": "Kiin",
+                  "kills": 1,
+                  "deaths": 2,
+                  "killAssistsGiven": 0,
+                  "character": {
+                    "id": "40cc8559-a028-35a5-a6dd-5e48c4601d66",
+                    "name": "K'Sante"
+                  }
+                },
+                {
+                  "id": "21233",
+                  "name": "Canyon",
+                  "kills": 0,
+                  "deaths": 0,
+                  "killAssistsGiven": 3,
+                  "character": {
+                    "id": "f5848d60-ffbf-3c51-93ec-797142690b59",
+                    "name": "Rell"
+                  }
+                },
+                {
+                  "id": "22958",
+                  "name": "Chovy",
+                  "kills": 2,
+                  "deaths": 1,
+                  "killAssistsGiven": 2,
+                  "character": {
+                    "id": "e7a28e21-1e51-3ff4-ae76-2e7dc7a69ace",
+                    "name": "Corki"
+                  }
+                },
+                {
+                  "id": "24653",
+                  "name": "Peyz",
+                  "kills": 1,
+                  "deaths": 2,
+                  "killAssistsGiven": 2,
+                  "character": {
+                    "id": "24553764-d70e-3d37-ab9b-51b37ff3e287",
+                    "name": "Aphelios"
+                  }
+                },
+                {
+                  "id": "20972",
+                  "name": "Lehends",
+                  "kills": 0,
+                  "deaths": 1,
+                  "killAssistsGiven": 2,
+                  "character": {
+                    "id": "e5a58f35-4cf1-302e-85fc-e99e161c38ab",
+                    "name": "Lulu"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "39ebbb3d-73e2-49c0-8669-1ee8a0a32499",
+          "sequenceNumber": 2,
+          "started": true,
+          "finished": true,
+          "map": {
+            "name": "Summoner's Rift"
+          },
+          "teams": [
+            {
+              "id": "47494",
+              "name": "T1",
+              "side": "blue",
+              "won": false,
+              "score": 10,
+              "kills": 10,
+              "deaths": 17,
+              "players": [
+                {
+                  "id": "23596",
+                  "name": "Zeus",
+                  "kills": 1,
+                  "deaths": 2,
+                  "killAssistsGiven": 8,
+                  "character": {
+                    "id": "feae77fb-662d-3591-b06c-179f7697a1c3",
+                    "name": "Udyr"
+                  }
+                },
+                {
+                  "id": "21690",
+                  "name": "Oner",
+                  "kills": 1,
+                  "deaths": 4,
+                  "killAssistsGiven": 4,
+                  "character": {
+                    "id": "a0b6984e-e1ec-3e4c-a98d-34a6ba4aec9f",
+                    "name": "Lee Sin"
+                  }
+                },
+                {
+                  "id": "20763",
+                  "name": "Faker",
+                  "kills": 0,
+                  "deaths": 5,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "eaea6b00-a13f-3241-a356-04d7882fb128",
+                    "name": "Azir"
+                  }
+                },
+                {
+                  "id": "24427",
+                  "name": "Gumayusi",
+                  "kills": 6,
+                  "deaths": 3,
+                  "killAssistsGiven": 3,
+                  "character": {
+                    "id": "c45c8a39-aab4-3828-a73b-ac860069b4aa",
+                    "name": "Nilah"
+                  }
+                },
+                {
+                  "id": "26121",
+                  "name": "Keria",
+                  "kills": 2,
+                  "deaths": 3,
+                  "killAssistsGiven": 7,
+                  "character": {
+                    "id": "1e62a140-7265-3823-884d-621be47f2b00",
+                    "name": "Senna"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "47558",
+              "name": "Gen.G",
+              "side": "red",
+              "won": true,
+              "score": 17,
+              "kills": 17,
+              "deaths": 10,
+              "players": [
+                {
+                  "id": "21335",
+                  "name": "Kiin",
+                  "kills": 3,
+                  "deaths": 4,
+                  "killAssistsGiven": 4,
+                  "character": {
+                    "id": "40cc8559-a028-35a5-a6dd-5e48c4601d66",
+                    "name": "K'Sante"
+                  }
+                },
+                {
+                  "id": "21233",
+                  "name": "Canyon",
+                  "kills": 1,
+                  "deaths": 1,
+                  "killAssistsGiven": 12,
+                  "character": {
+                    "id": "cf8f9783-b321-3a1d-95bd-f3e3b612d4c4",
+                    "name": "Maokai"
+                  }
+                },
+                {
+                  "id": "22958",
+                  "name": "Chovy",
+                  "kills": 8,
+                  "deaths": 2,
+                  "killAssistsGiven": 7,
+                  "character": {
+                    "id": "362848c1-8982-3378-a4fd-b49296f5bdb4",
+                    "name": "Tristana"
+                  }
+                },
+                {
+                  "id": "24653",
+                  "name": "Peyz",
+                  "kills": 5,
+                  "deaths": 2,
+                  "killAssistsGiven": 8,
+                  "character": {
+                    "id": "d5da0bd8-00ea-3bc1-9ad9-09751d791b20",
+                    "name": "Varus"
+                  }
+                },
+                {
+                  "id": "20972",
+                  "name": "Lehends",
+                  "kills": 0,
+                  "deaths": 1,
+                  "killAssistsGiven": 12,
+                  "character": {
+                    "id": "31360e91-4470-348a-9a2b-ce10e9a107b1",
+                    "name": "Rakan"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2430ed67-88b1-4d9f-9eda-3eb87423ad4f",
+          "sequenceNumber": 3,
+          "started": true,
+          "finished": true,
+          "map": {
+            "name": "Summoner's Rift"
+          },
+          "teams": [
+            {
+              "id": "47494",
+              "name": "T1",
+              "side": "blue",
+              "won": false,
+              "score": 10,
+              "kills": 10,
+              "deaths": 25,
+              "players": [
+                {
+                  "id": "23596",
+                  "name": "Zeus",
+                  "kills": 2,
+                  "deaths": 5,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "670a5be5-c642-361c-81f7-2cfb6cbb0ae3",
+                    "name": "Kennen"
+                  }
+                },
+                {
+                  "id": "21690",
+                  "name": "Oner",
+                  "kills": 2,
+                  "deaths": 7,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "5affb379-5701-370d-b33b-160d6151bff7",
+                    "name": "Bel'Veth"
+                  }
+                },
+                {
+                  "id": "20763",
+                  "name": "Faker",
+                  "kills": 3,
+                  "deaths": 3,
+                  "killAssistsGiven": 5,
+                  "character": {
+                    "id": "eaea6b00-a13f-3241-a356-04d7882fb128",
+                    "name": "Azir"
+                  }
+                },
+                {
+                  "id": "24427",
+                  "name": "Gumayusi",
+                  "kills": 3,
+                  "deaths": 4,
+                  "killAssistsGiven": 2,
+                  "character": {
+                    "id": "5748a92e-ed31-3fbf-854d-a37923f7c7ae",
+                    "name": "Jhin"
+                  }
+                },
+                {
+                  "id": "26121",
+                  "name": "Keria",
+                  "kills": 0,
+                  "deaths": 6,
+                  "killAssistsGiven": 8,
+                  "character": {
+                    "id": "2bcecd67-6a8c-3c44-be6a-bd120bc1dcc5",
+                    "name": "Bard"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "47558",
+              "name": "Gen.G",
+              "side": "red",
+              "won": true,
+              "score": 25,
+              "kills": 25,
+              "deaths": 10,
+              "players": [
+                {
+                  "id": "21335",
+                  "name": "Kiin",
+                  "kills": 1,
+                  "deaths": 3,
+                  "killAssistsGiven": 9,
+                  "character": {
+                    "id": "feae77fb-662d-3591-b06c-179f7697a1c3",
+                    "name": "Udyr"
+                  }
+                },
+                {
+                  "id": "21233",
+                  "name": "Canyon",
+                  "kills": 3,
+                  "deaths": 1,
+                  "killAssistsGiven": 10,
+                  "character": {
+                    "id": "cf8f9783-b321-3a1d-95bd-f3e3b612d4c4",
+                    "name": "Maokai"
+                  }
+                },
+                {
+                  "id": "22958",
+                  "name": "Chovy",
+                  "kills": 7,
+                  "deaths": 2,
+                  "killAssistsGiven": 9,
+                  "character": {
+                    "id": "31822a27-64be-3b58-9cfa-17fd705fc871",
+                    "name": "Yone"
+                  }
+                },
+                {
+                  "id": "24653",
+                  "name": "Peyz",
+                  "kills": 12,
+                  "deaths": 1,
+                  "killAssistsGiven": 4,
+                  "character": {
+                    "id": "d5da0bd8-00ea-3bc1-9ad9-09751d791b20",
+                    "name": "Varus"
+                  }
+                },
+                {
+                  "id": "20972",
+                  "name": "Lehends",
+                  "kills": 2,
+                  "deaths": 3,
+                  "killAssistsGiven": 12,
+                  "character": {
+                    "id": "31360e91-4470-348a-9a2b-ce10e9a107b1",
+                    "name": "Rakan"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
