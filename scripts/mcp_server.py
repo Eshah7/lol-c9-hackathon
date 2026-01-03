@@ -27,7 +27,7 @@ async def list_tools() -> List[types.Tool]:
     return [
         types.Tool(
             name="generate_scouting_report",
-            description="Generate a comprehensive pre-game scouting report for a League of Legends team. Analyzes recent matches, champion pools, player performance, and map statistics.",
+            description="Generate a comprehensive pre-game scouting report for a League of Legends team. Analyzes recent matches, champion pools, player performance, map statistics, and provides strategic insights (Top 3 watch-outs and How to beat them).",
             inputSchema={
                 "type": "object",
                 "properties": {

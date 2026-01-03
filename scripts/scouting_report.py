@@ -235,6 +235,46 @@ def analyze_series_for_team(series_id: str, team_id: str, api_key: Optional[str]
         "games": series_data.get("games", [])
     }
 
+def generate_insights(top_champions: List, map_performance: Dict, player_performance: Dict) -> Dict[str, Any]:
+    """Generate strategic insights based on the scouting data."""
+    look_out_for = []
+    how_to_beat = []
+    
+    # 1. Champion threats
+    high_winrate_champs = [c for c, s in top_champions if s["win_rate"] > 70 and s["games"] >= 3]
+    if not high_winrate_champs:
+        high_winrate_champs = [c for c, s in top_champions if s["win_rate"] >= 50 and s["games"] >= 2]
+    
+    if high_winrate_champs:
+        champ = high_winrate_champs[0]
+        look_out_for.append(f"Highly effective {champ} usage ({dict(top_champions)[champ]['win_rate']:.1f}% win rate)")
+        how_to_beat.append(f"Prioritize banning {champ} or drafting a hard counter")
+    
+    # 2. Player threats
+    top_players = sorted(player_performance.items(), key=lambda x: x[1]["kda"], reverse=True)
+    if top_players:
+        p_id, p_stats = top_players[0]
+        look_out_for.append(f"Carry performance from Player {p_id} (Average KDA: {p_stats['kda']:.2f})")
+        how_to_beat.append(f"Focus early pressure and vision on Player {p_id}'s lane to stifle their growth")
+
+    # 3. Map preferences
+    strong_maps = sorted([m for m, s in map_performance.items() if s["wins"] > 0], 
+                         key=lambda m: map_performance[m]["win_rate"], reverse=True)
+    if strong_maps:
+        m_name = strong_maps[0]
+        look_out_for.append(f"Dominant performance on {m_name} ({map_performance[m_name]['win_rate']:.1f}% win rate)")
+        how_to_beat.append(f"Avoid playing {m_name} if possible, or prepare specific level 1 strategies for this map")
+
+    # Default if not enough data
+    while len(look_out_for) < 3:
+        look_out_for.append("Consistent team coordination in mid-game transitions")
+        how_to_beat.append("Force early skirmishes to disrupt their macro play")
+    
+    return {
+        "top_3_watch_out": look_out_for[:3],
+        "how_to_beat": how_to_beat[:3]
+    }
+
 def generate_scouting_report(team_id: str, team_name: Optional[str] = None, days: Optional[int] = None, api_key: Optional[str] = None) -> Dict[str, Any]:
     """Generate a comprehensive pre-game scouting report for a team.
     
@@ -407,6 +447,8 @@ def generate_scouting_report(team_id: str, team_name: Optional[str] = None, days
         }
     
     # Build report
+    insights = generate_insights(top_champions, map_performance, player_performance)
+    
     report = {
         "team_id": team_id,
         "team_name": team_name or analyzed_series[0]["team"]["name"] if analyzed_series else "Unknown",
@@ -421,6 +463,7 @@ def generate_scouting_report(team_id: str, team_name: Optional[str] = None, days
         "player_performance": player_performance,
         "map_performance": map_performance,
         "opponents_faced": dict(opponents_faced.most_common(10)),
+        "insights": insights,
         "recent_series": [
             {
                 "series_id": s["series_id"],
@@ -456,6 +499,19 @@ def format_scouting_report(report: Dict[str, Any]) -> str:
     output.append("-" * 80)
     output.append(f"Win Rate: {stats['win_rate']:.1f}% ({stats['wins']}W-{stats['losses']}L)")
     output.append("")
+    
+    # Insights
+    if "insights" in report:
+        output.append("💡 STRATEGIC INSIGHTS")
+        output.append("-" * 80)
+        output.append("Top 3 things to look out for:")
+        for i, item in enumerate(report["insights"]["top_3_watch_out"], 1):
+            output.append(f"  {i}. {item}")
+        output.append("")
+        output.append("How to beat them:")
+        for i, item in enumerate(report["insights"]["how_to_beat"], 1):
+            output.append(f"  {i}. {item}")
+        output.append("")
     
     # Top champions
     output.append("🎮 TOP CHAMPIONS (by usage)")
